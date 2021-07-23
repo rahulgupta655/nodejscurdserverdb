@@ -1,0 +1,33 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/detail" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{detail._id}}">
+    <div class="form-group">
+        <label>PRODUCTID</label>
+        <input type="text" class="form-control" name="productid" placeholder="productID" value="{{detail.productid}}">
+        <div class="text-danger">
+            {{employee.productidError}}</div>
+    </div>
+    <div class="form-group">
+        <label>PRODUCTNAME</label>
+        <input type="text" class="form-control" name="productname" placeholder="productname" value="{{detail.productname}}">
+        <div class="text-danger">
+            {{employee.productnameError}}</div>
+    </div>
+        <div class="form-group">
+            <label>CATEGORYID</label>
+            <input type="text" class="form-control" name="categoryid" placeholder="categoryID" value="{{detail.categoryid}}">
+            <div class="text-danger">
+                {{employee.categoryidError}}</div>
+        </div>
+        <div class="form-group">
+            <label>CATEGORYNAME</label>
+            <input type="text" class="form-control" name="categoryname" placeholder="categoryname" value="{{detail.categoryname}}">
+            <div class="text-danger">
+                {{employee.categorynameError}}</div>
+        </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/detail/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

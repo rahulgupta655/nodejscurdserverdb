@@ -1,0 +1,26 @@
+<h3><a class="btn btn-secondary" href="/detail"><i class="fa fa-plus"></i> Create New</a> Items List</h3>
+<table class="table table-striped text-center">
+    <thead>
+        <tr class="text-uppercase">
+            <th>productid</th>
+            <th>productname</th>
+            <th>categoryid</th>
+            <th>categoryname</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.productid}}</td>
+            <td>{{this.productname}}</td>
+            <td>{{this.categoryid}}</td>
+            <td>{{this.categoryname}}</td>
+            <td>
+                <a href="/detail/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/detail/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
